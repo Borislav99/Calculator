@@ -25,7 +25,7 @@ body {
   border-radius: 1rem;
   background: #f9c56b;
   border-radius: 3rem 3rem 1rem 1rem;
-  animation: moveInBottom 2s .5s;
+  animation: moveInBottom 1s .2s;
   animation-fill-mode: backwards;
 }
 .form-container {
@@ -123,12 +123,12 @@ body {
 }
 @media screen and (min-width: 300px) {
   html {
-    font-size: 22.5%;
+    font-size: 42.5%;
   }
 }
 @media screen and (min-width: 400px) {
   html {
-    font-size: 32.5%;
+    font-size: 42.5%;
   }
 }
 @media screen and (min-width: 500px) {
