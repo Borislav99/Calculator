@@ -1,3 +1,4 @@
+/* --- Reset --- */
 * {
   margin: 0;
   padding: 0;
@@ -6,6 +7,7 @@
 html {
   font-size: 62.5%;
 }
+/* --- Reset --- */
 body {
   font-family: "Baloo Bhaina 2", cursive;
   position: relative;
@@ -17,11 +19,14 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+/* --- Calculator Container --- */
 .calculator-container {
   position: relative;
   border-radius: 1rem;
   background: #f9c56b;
   border-radius: 3rem 3rem 1rem 1rem;
+  animation: moveInBottom 2s .5s;
+  animation-fill-mode: backwards;
 }
 .form-container {
   padding: 2rem;
@@ -45,6 +50,8 @@ body {
   font-weight: 999;
   width: 100%;
 }
+/* --- Calculator Container --- */
+/* --- Buttons Container --- */
 .buttons-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -53,7 +60,8 @@ body {
   margin: 2rem;
   padding: 1rem 2.5rem;
 }
-.btn, .zero {
+.btn,
+.zero {
   text-align: center;
   background: #f49f0a;
   color: #ffff;
@@ -62,7 +70,9 @@ body {
   box-shadow: 0 0.2rem 0 rgb(51, 15, 10);
   transition: all 0.3s;
 }
-.btnCalc, .equal, .plus {
+.btnCalc,
+.equal,
+.plus {
   text-align: center;
   background: #ffff;
   color: rgb(51, 15, 10);
@@ -71,27 +81,45 @@ body {
   box-shadow: 0 0.2rem 0 rgb(51, 15, 10);
   transition: all 0.3s;
 }
-.btn:hover,.zero:hover {
+.btn:hover,
+.zero:hover {
   transform: translateY(-0.3rem);
   box-shadow: 0 0.5rem 0 rgb(51, 15, 10);
   cursor: pointer;
 }
-.btnCalc:hover, .equal:hover, .plus:hover {
+.btnCalc:hover,
+.equal:hover,
+.plus:hover {
   transform: translateY(-0.3rem);
   box-shadow: 0 0.5rem 0 rgb(51, 15, 10);
   cursor: pointer;
 }
-.btn:active {
+.C {
+  background: #ed6a5a;
+}
+.btn:active, .equal:active, .C:active {
   transform: translateY(-0.1rem);
   box-shadow: 0 0.2rem 0 rgb(51, 15, 10);
 }
 .lastchild {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-.lastchild>div{
- margin: 2rem;
- padding: 1rem 2.5rem;
+.lastchild > div {
+  margin: 2rem;
+  padding: 1rem 2.5rem;
+}
+/* --- Buttons Container --- */
+/* --- Animations & Media Q --- */
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 @media screen and (min-width: 300px) {
   html {
@@ -117,4 +145,6 @@ body {
   html {
     font-size: 62.5%;
   }
- }
+}
+
+/* --- Animations & Media Q --- */
