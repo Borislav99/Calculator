@@ -48,13 +48,12 @@ body {
 .buttons-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  padding: 2rem;
 }
 .buttons-container > div {
   margin: 2rem;
   padding: 1rem 2.5rem;
 }
-.btn {
+.btn, .zero {
   text-align: center;
   background: #f49f0a;
   color: #ffff;
@@ -63,7 +62,7 @@ body {
   box-shadow: 0 0.2rem 0 rgb(51, 15, 10);
   transition: all 0.3s;
 }
-.btnCalc {
+.btnCalc, .equal, .plus {
   text-align: center;
   background: #ffff;
   color: rgb(51, 15, 10);
@@ -72,12 +71,12 @@ body {
   box-shadow: 0 0.2rem 0 rgb(51, 15, 10);
   transition: all 0.3s;
 }
-.btn:hover {
+.btn:hover,.zero:hover {
   transform: translateY(-0.3rem);
   box-shadow: 0 0.5rem 0 rgb(51, 15, 10);
   cursor: pointer;
 }
-.btnCalc:hover {
+.btnCalc:hover, .equal:hover, .plus:hover {
   transform: translateY(-0.3rem);
   box-shadow: 0 0.5rem 0 rgb(51, 15, 10);
   cursor: pointer;
@@ -86,6 +85,36 @@ body {
   transform: translateY(-0.1rem);
   box-shadow: 0 0.2rem 0 rgb(51, 15, 10);
 }
-.zero{
- border: 1px solid red;
+.lastchild {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
 }
+.lastchild>div{
+ margin: 2rem;
+ padding: 1rem 2.5rem;
+}
+@media screen and (min-width: 300px) {
+  html {
+    font-size: 22.5%;
+  }
+}
+@media screen and (min-width: 400px) {
+  html {
+    font-size: 32.5%;
+  }
+}
+@media screen and (min-width: 500px) {
+  html {
+    font-size: 42.5%;
+  }
+}
+@media screen and (min-width: 700px) {
+  html {
+    font-size: 52.5%;
+  }
+}
+@media screen and (min-width: 800px) {
+  html {
+    font-size: 62.5%;
+  }
+ }
